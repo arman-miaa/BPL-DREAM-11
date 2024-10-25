@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Banner from "./components/Banner/Banner";
 import Header from "./components/Header/Header";
 import Button from "./components/Main-body/Button/Button";
+import Subscript from "./components/Subscribe/Subscript";
 
 
 function App() {
@@ -34,6 +35,7 @@ setActiveButton(status);
         activeButton={activeButton}
         player={player}
       ></Button>
+      <Subscript></Subscript>
     </>
   );
 }
