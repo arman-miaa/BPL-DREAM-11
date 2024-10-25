@@ -4,6 +4,7 @@ import Banner from "./components/Banner/Banner";
 import Header from "./components/Header/Header";
 import Button from "./components/Main-body/Button/Button";
 import Subscript from "./components/Subscribe/Subscript";
+import Footer from "./components/Footer/Footer";
 
 
 function App() {
@@ -36,6 +37,7 @@ setActiveButton(status);
         player={player}
       ></Button>
       <Subscript></Subscript>
+      <Footer></Footer>
     </>
   );
 }
