@@ -4,12 +4,12 @@ export default function Subscript() {
   return (
     <div className="container mx-auto mt-36 border-2 p-4 border-gray-400 rounded-xl relative top-32 z-30">
       <div
-        className="w-full h-[500px] rounded-xl flex space-y-3 flex-col justify-center items-center"
+        className="w-full h-[500px] rounded-xl bg-white backdrop-blur-2xl flex space-y-3 flex-col justify-center items-center"
         style={{
           backgroundImage: `url('/images/bg-shadow.png')`,
           objectFit: "cover",
           backgroundSize: "cover",
-        //   background: "#FFFFFF",
+          //   background: "#FFFFFF",
         }}
       >
         <h2 className="text-3xl font-semibold text-center">
@@ -23,7 +23,9 @@ export default function Subscript() {
             Email
             <input type="text" className="grow" placeholder="daisy@site.com" />
           </label>
-          <button className="btn">Subscribe</button>
+          <button className="btn btn-[#ff5733] ml-2 bg-gradient-to-t from-[yellow] via-[#ff5733]">
+            Subscribe
+          </button>
         </div>
       </div>
     </div>

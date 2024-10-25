@@ -2,11 +2,11 @@
 
 export default function Banner({ handleCoin }) {
   return (
-    <div className="container mx-auto mt-12">
+    <div className="container mx-auto  mt-12 bg-black backdrop-blur-2xl overflow-hidden relative rounded-xl">
       <div
         className="flex flex-col items-center justify-center gap-4"
         style={{
-          backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('/images/bg-shadow.png')`,
+          backgroundImage: `url('/images/bg-shadow.png')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           height: "600px",
@@ -21,7 +21,7 @@ export default function Banner({ handleCoin }) {
           Beyond Boundaries Beyond Limits
         </h3>
         <div className="border-2 rounded-xl p-2 border-yellow-300">
-          <button onClick={ handleCoin} className="btn bg-[#E7FE29]">
+          <button onClick={handleCoin} className="btn bg-[#E7FE29]">
             Claim Free Credit
           </button>
         </div>
