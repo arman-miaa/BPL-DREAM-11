@@ -1,6 +1,6 @@
 
 export default function AvailableCard({ playerr }) {
-    console.log(playerr);
+    // console.log(playerr);
     const { name, country, image, rating, battingType, biddingPrice,} = playerr;
   return (
     <div>

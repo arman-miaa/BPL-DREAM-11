@@ -1,6 +1,6 @@
 
 
-export default function Banner() {
+export default function Banner({ handleCoin }) {
   return (
     <div className="container mx-auto mt-12">
       <div
@@ -21,7 +21,9 @@ export default function Banner() {
           Beyond Boundaries Beyond Limits
         </h3>
         <div className="border-2 rounded-xl p-2 border-yellow-300">
-          <button className="btn bg-[#E7FE29]">Claim Free Credit</button>
+          <button onClick={ handleCoin} className="btn bg-[#E7FE29]">
+            Claim Free Credit
+          </button>
         </div>
       </div>
     </div>

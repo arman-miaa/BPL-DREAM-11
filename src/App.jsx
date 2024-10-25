@@ -6,8 +6,12 @@ import Button from "./components/Main-body/Button/Button";
 import Subscript from "./components/Subscribe/Subscript";
 import Footer from "./components/Footer/Footer";
 
+ import { ToastContainer, toast } from "react-toastify";
+ import "react-toastify/dist/ReactToastify.css";
 
 function App() {
+  // coin option
+  const [coin, setCoin] = useState(0);
 
   // for active button
   const [activeButton, setActiveButton] = useState("available");
@@ -20,6 +24,14 @@ function App() {
 setActiveButton(status);
   }
 
+  // coin function
+  const handleCoin = () => { 
+    setCoin(coin + 500000);
+    toast('You Added $ 500000');
+    
+  }
+
+
   useEffect(() => {
     fetch('players.json')
       .then(response => response.json())
@@ -29,8 +41,8 @@ setActiveButton(status);
 
   return (
     <>
-      <Header></Header>
-      <Banner></Banner>
+      <Header coin={coin}></Header>
+      <Banner handleCoin={handleCoin}></Banner>
       <Button
         handleIsActive={handleIsActive}
         activeButton={activeButton}
@@ -38,6 +50,7 @@ setActiveButton(status);
       ></Button>
       <Subscript></Subscript>
       <Footer></Footer>
+       <ToastContainer position="top-center" autoClose={5000}  />
     </>
   );
 }

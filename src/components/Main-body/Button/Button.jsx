@@ -7,7 +7,7 @@ export default function Button({ handleIsActive, activeButton, player }) {
     <div>
       <div className="container mx-auto mt-12 flex justify-between">
         {activeButton === "available"
-          ? "Selected Player"
+          ? "Available Players"
           : "Selected Player (0/6)"}
 
         <div className="space-x-4">

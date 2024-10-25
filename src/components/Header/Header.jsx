@@ -1,4 +1,4 @@
-export default function Header() {
+export default function Header({ coin }) {
   return (
     <div className="container mx-auto mt-8">
       <div className="navbar bg-base-100 flex justify-between">
@@ -24,7 +24,7 @@ export default function Header() {
             </li>
             <li>
               <div className="flex items-center py-2 px-6 rounded-xl justify-center gap-1 border-2 bg-white ">
-                <h3 className="text-xl">0 </h3>
+                <h3 className="text-xl">{coin}</h3>
                 <h3 className="text-lg">Cion</h3>
                 <img
                   className="w-8"
