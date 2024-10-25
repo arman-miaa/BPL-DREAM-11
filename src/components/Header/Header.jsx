@@ -1,4 +1,5 @@
-
+import '../../../public/images/logo.png'
+import '../../../public/images/icons8-dollar-coin-48.png'
 
 export default function Header() {
   return (
@@ -8,7 +9,7 @@ export default function Header() {
           <a className="  text-xl">
             <img
               className="w-3/4"
-              src="../../../public/images/logo.png"
+              src="/images/logo.png"
               alt=""
             />
           </a>
@@ -34,7 +35,7 @@ export default function Header() {
                 <h3 className="text-lg">Cion</h3>
                 <img
                   className="w-8"
-                  src="../../../public/images/icons8-dollar-coin-48.png"
+                  src="/images/icons8-dollar-coin-48.png"
                   alt=""
                 />
               </div>
