@@ -24,8 +24,8 @@ export default function Header({ coin }) {
             </li>
             <li>
               <div className="flex items-center py-2 px-6 rounded-xl justify-center gap-1 border-2 bg-white ">
-                <h3 className="text-xl">{coin}</h3>
-                <h3 className="text-lg">Cion</h3>
+                <h3 className="text-xl">${coin}</h3>
+                <h3 className="text-lg">Coin</h3>
                 <img
                   className="w-8"
                   src="/images/icons8-dollar-coin-48.png"

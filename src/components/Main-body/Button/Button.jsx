@@ -1,14 +1,21 @@
 import AvailableCards from "../../AvailableCards/AvailableCards";
 import SelectedCards from "../../SelectedCards/SelectedCards";
 
-
-export default function Button({ handleIsActive, activeButton, player }) {
+export default function Button({
+  handleIsActive,
+  activeButton,
+  player,
+  handleSelectPlayer,
+  choosePlayer,
+  handleDeletePlayer,
+}) {
+  console.log(choosePlayer);
   return (
     <div>
       <div className="container mx-auto mt-12 flex justify-between">
         {activeButton === "available"
           ? "Available Players"
-          : "Selected Player (0/6)"}
+          : `Selected Player (${choosePlayer.length}/6)`}
 
         <div className="space-x-4">
           <button
@@ -29,15 +36,21 @@ export default function Button({ handleIsActive, activeButton, player }) {
             }}
             className="btn"
           >
-            Selected(0)
+            Selected({choosePlayer.length})
           </button>
         </div>
       </div>
       {activeButton === "available" ? (
-        <AvailableCards player={player} />
-
+        <AvailableCards
+          handleSelectPlayer={handleSelectPlayer}
+          player={player}
+        />
       ) : (
-        <SelectedCards />
+        <SelectedCards
+          choosePlayer={choosePlayer}
+                      handleIsActive={handleIsActive}
+                      handleDeletePlayer={handleDeletePlayer}
+        />
       )}
     </div>
   );

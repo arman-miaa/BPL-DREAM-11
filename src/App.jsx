@@ -18,9 +18,15 @@ function App() {
 
   // for avalabe cards
   const [player, setPlayer] = useState([]);
-  // console.log(player);
   
-  const handleIsActive = (status)=>{
+  // choose player 
+  const [choosePlayer, setChoosePlayer] = useState([]);
+  console.log(choosePlayer);
+
+  // delete selected player
+  const [deletePlayer, setDeletePlayer] = useState([]);
+  
+  const handleIsActive = (status) => {
 setActiveButton(status);
   }
 
@@ -30,6 +36,43 @@ setActiveButton(status);
     toast('You Added $ 500000');
     
   }
+
+
+  const handleSelectPlayer = (selectPlayer) => {
+   
+    const isExist = choosePlayer.find(
+      (player) => player.playerId === selectPlayer.playerId
+    );
+
+   if (selectPlayer.biddingPrice > coin) {
+     toast(
+       `Not enough coins to select ${selectPlayer.name}. You need $${selectPlayer.biddingPrice}.`
+     );
+     return coin - selectPlayer.biddingPrice; // Exit the function early if not enough coins
+   }
+    if (!isExist) {
+      if (choosePlayer.length < 6) {
+        setCoin((prevCoin) => prevCoin - selectPlayer.biddingPrice);
+        setChoosePlayer([...choosePlayer, selectPlayer]);
+        toast(
+          `You Addad ${selectPlayer.name} and his Price ${selectPlayer.biddingPrice}.`
+        );
+      } else {
+        toast("You can only select up to 6 players.");
+      }
+    } else {
+      toast(`${selectPlayer.name} is already in the list.`);
+    }
+  };
+
+  // delete selected player function
+  const handleDeletePlayer = (deletePlayer) => {
+    console.log('delete clicked');
+    const newChoosePlayer = choosePlayer.filter(
+      (player) => player.playerId !== deletePlayer.playerId
+    );
+    setChoosePlayer(newChoosePlayer);
+   }
 
 
   useEffect(() => {
@@ -47,10 +90,13 @@ setActiveButton(status);
         handleIsActive={handleIsActive}
         activeButton={activeButton}
         player={player}
+        handleSelectPlayer={handleSelectPlayer}
+        choosePlayer={choosePlayer}
+        handleDeletePlayer={handleDeletePlayer}
       ></Button>
       <Subscript></Subscript>
       <Footer></Footer>
-       <ToastContainer position="top-center" autoClose={5000}  />
+      <ToastContainer position="top-center" autoClose={5000} />
     </>
   );
 }

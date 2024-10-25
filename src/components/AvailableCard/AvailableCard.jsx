@@ -1,7 +1,7 @@
 
-export default function AvailableCard({ playerr }) {
-    // console.log(playerr);
-    const { name, country, image, rating, battingType, biddingPrice,} = playerr;
+export default function AvailableCard({ playerr, handleSelectPlayer }) {
+  // console.log(playerr);
+  const { name, country, image, rating, battingType, biddingPrice } = playerr;
   return (
     <div>
       <div className="card card-compact bg-base-100  shadow-xl">
@@ -32,10 +32,11 @@ export default function AvailableCard({ playerr }) {
             <h2>{battingType}</h2>
           </div>
           <div className="flex justify-between items-center">
-            <h3>Price: {biddingPrice}</h3>
-            <button className="btn">Choose Player</button>
+            <h3>Price: $ {biddingPrice}</h3>
+            <button onClick={ ()=> handleSelectPlayer(playerr)} className="btn">
+              Choose Player
+            </button>
           </div>
-         
         </div>
       </div>
     </div>
