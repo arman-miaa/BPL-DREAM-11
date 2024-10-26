@@ -2,9 +2,9 @@
 
 export default function Banner({ handleCoin }) {
   return (
-    <div className="container mx-auto  mt-14 bg-black backdrop-blur-2xl overflow-hidden relative rounded-2xl">
+    <div className="container mx-auto w-11/12 md:w-full  mt-14 bg-black backdrop-blur-2xl overflow-hidden relative rounded-2xl">
       <div
-        className="flex flex-col items-center justify-center gap-4"
+        className="flex flex-col items-center justify-center  gap-4"
         style={{
           backgroundImage: `url('/images/bg-shadow.png')`,
           backgroundSize: "cover",

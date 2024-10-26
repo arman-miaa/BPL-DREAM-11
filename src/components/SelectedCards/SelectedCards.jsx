@@ -1,12 +1,13 @@
 
 
 export default function SelectedCards({ choosePlayer, handleIsActive, handleDeletePlayer }) {
-  console.log("Current selected players:", choosePlayer);
   return (
-    <div className="container mx-auto mt-4">
+    <div className="container mx-auto mt-4 w-11/12 md:w-full">
       <div>
-        {/* <h1>Selected Cards </h1> */}
-        {choosePlayer.map((player) => (
+        
+        {choosePlayer.length === 0 ? <div className="text-center text-3xl lg:text-5xl italic text-red-300">
+          <h1>No players selected.</h1>
+        </div> : choosePlayer.map((player) => (
           <div className="flex justify-between border-2 rounded-xl mt-4 items-center p-[20px]">
             <div className="flex items-center  gap-6">
               <div className="w-32 h-24">

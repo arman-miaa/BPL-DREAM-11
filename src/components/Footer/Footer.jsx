@@ -33,10 +33,10 @@ export default function Footer() {
             </ul>
           </nav>
           <form className="text-white">
-            <h6 className="text-white text-xl font-semibold">Subscribe</h6>
+            <h6 className="text-white text-xl mx-auto md:mx-0 font-semibold">Subscribe</h6>
             <fieldset className="form-control w-80">
               <label className="label">
-                <span className="label-text text-[#FFFFFF99]">
+                <span className="label-text text-[#FFFFFF99] mx-auto md:mx-0 text-center md:text-start">
                   Subscribe to our newsletter for the <br /> latest updates.
                 </span>
               </label>

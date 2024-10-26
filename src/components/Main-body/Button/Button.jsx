@@ -11,7 +11,7 @@ export default function Button({
 }) {
   return (
     <div>
-      <div className="container mx-auto mt-12 flex justify-between text-xl lg:text-2xl font-bold">
+      <div className="container mx-auto w-11/12 md:w-full mt-12 flex justify-between text-xl lg:text-2xl font-bold">
         {activeButton === "available"
           ? "Available Players"
           : `Selected Player (${choosePlayer.length}/6)`}

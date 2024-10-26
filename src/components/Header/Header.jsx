@@ -5,7 +5,11 @@ export default function Header({ coin }) {
         <div className="navbar bg-base-100 flex justify-between">
           <div className="navbar-start ">
             <a className="  text-xl">
-              <img className="w-3/4 lg:w-5/6 cursor-pointer" src="/images/logo.png" alt="" />
+              <img
+                className="w-3/4 lg:w-5/6 cursor-pointer"
+                src="/images/logo.png"
+                alt=""
+              />
             </a>
           </div>
           <div className="navbar-end hidden md:flex">
@@ -39,11 +43,12 @@ export default function Header({ coin }) {
           {/* for small screen */}
           <li>
             <div className=" md:hidden flex items-center py-2 px-6 rounded-xl justify-center gap-1 border-2 bg-white ">
-              <h3 className="text-xl">0 </h3>
-              <h3 className="text-lg">Cion</h3>
+              <h3 className="text-xl">{`${coin}`}</h3>
+
+              <h3 className="text-lg">Coin</h3>
               <img
                 className="w-8"
-                src="../../../public/images/icons8-dollar-coin-48.png"
+                src="/images/icons8-dollar-coin-48.png"
                 alt=""
               />
             </div>
