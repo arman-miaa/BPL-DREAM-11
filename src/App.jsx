@@ -21,7 +21,6 @@ function App() {
   
   // choose player 
   const [choosePlayer, setChoosePlayer] = useState([]);
-  console.log(choosePlayer);
 
   // delete selected player
   // const [deletePlayer, setDeletePlayer] = useState([]);

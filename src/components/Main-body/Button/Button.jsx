@@ -9,7 +9,6 @@ export default function Button({
   choosePlayer,
   handleDeletePlayer,
 }) {
-  console.log(choosePlayer);
   return (
     <div>
       <div className="container mx-auto mt-12 flex justify-between">

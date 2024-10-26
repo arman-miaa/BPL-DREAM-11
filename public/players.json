@@ -2,9 +2,9 @@
   "players": [
     {
       "playerId": 1,
-      "name": "Ahmed Ali",
+      "name": "Afif Hossion",
       "country": "Bangladesh",
-      "image": "https://i.ibb.co.com/rs8gGZH/161e93f4-9a13-4069-bd04-0878c59fa594.jpg",
+      "image": "https://i.ibb.co.com/jbryh1R/download-1.jpg",
       "role": "All-Rounder",
       "battingType": "Left-hand bat",
       "bowlingType": "Right-arm medium",
@@ -37,7 +37,7 @@
       "playerId": 4,
       "name": "Rohit Sharma",
       "country": "India",
-      "image": "https://i.ibb.co.com/KW7zgTp/download-1.jpg",
+      "image": "https://i.ibb.co.com/k59Gh5H/download-2.jpg",
       "role": "Bowler",
       "battingType": "Left-hand bat",
       "bowlingType": "Right-arm medium-fast",
@@ -112,7 +112,7 @@
     },
     {
       "playerId": 11,
-      "name": "Tariq Hussain",
+      "name": "Babar Azom",
       "country": "Pakistan",
       "image": "https://i.ibb.co.com/T8j5Gyx/images-5.jpg",
       "role": "All-Rounder",
@@ -123,9 +123,9 @@
     },
     {
       "playerId": 12,
-      "name": "Moinul Islam",
+      "name": "Mushfiqur Rahim",
       "country": "Bangladesh",
-      "image": "https://i.ibb.co.com/qC0MBdX/images-1.jpg",
+      "image": "https://i.ibb.co.com/q5JymdB/download.jpg",
       "role": "Bowler",
       "battingType": "Right-hand bat",
       "bowlingType": "Right-arm leg-spin",

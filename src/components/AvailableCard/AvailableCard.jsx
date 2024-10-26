@@ -7,7 +7,7 @@ export default function AvailableCard({ playerr, handleSelectPlayer }) {
       <div className="card card-compact bg-base-100  shadow-xl">
         <figure>
           <img
-            className="w-full h-[300px] rounded-xl"
+            className="w-full object-cover   h-[300px] rounded-xl"
             src={image}
             alt="Shoes"
           />
