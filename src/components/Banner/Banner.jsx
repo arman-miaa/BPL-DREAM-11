@@ -2,7 +2,7 @@
 
 export default function Banner({ handleCoin }) {
   return (
-    <div className="container mx-auto  mt-12 bg-black backdrop-blur-2xl overflow-hidden relative rounded-xl">
+    <div className="container mx-auto  mt-14 bg-black backdrop-blur-2xl overflow-hidden relative rounded-2xl">
       <div
         className="flex flex-col items-center justify-center gap-4"
         style={{

@@ -11,32 +11,32 @@ export default function Button({
 }) {
   return (
     <div>
-      <div className="container mx-auto mt-12 flex justify-between">
+      <div className="container mx-auto mt-12 flex justify-between text-xl lg:text-2xl font-bold">
         {activeButton === "available"
           ? "Available Players"
           : `Selected Player (${choosePlayer.length}/6)`}
 
-        <div className="space-x-4">
-          <button
+        <div className="border-2 rounded-xl">
+          <div
             onClick={() => handleIsActive("available")}
             style={{
               backgroundColor:
                 activeButton === "available" ? "#E7FE29" : "transparent",
             }}
-            className="btn"
+            className="btn font-bold border-none"
           >
-            Avalable
-          </button>
-          <button
+            Available
+          </div>
+          <div
             onClick={() => handleIsActive("selected")}
             style={{
               backgroundColor:
                 activeButton === "selected" ? "#E7FE29" : "transparent",
             }}
-            className="btn"
+            className="btn font-medium border-none"
           >
-            Selected({choosePlayer.length})
-          </button>
+            Selected ({choosePlayer.length})
+          </div>
         </div>
       </div>
       {activeButton === "available" ? (

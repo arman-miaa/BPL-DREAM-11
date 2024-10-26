@@ -7,16 +7,16 @@ export default function Footer() {
         <div className="flex justify-center mt-20">
           <img src="/images/logo-footer.png" alt="" />
         </div>
-        <footer className="footer text-base-content p-10 flex justify-between items-center flex-col md:flex-row  mt-12">
+        <footer className="footer text-base-content p-10 flex justify-between items-center flex-col md:flex-row ">
           <nav className="text-white">
-            <h6 className="footer-title">About Us</h6>
-            <p>
+            <h6 className=" text-xl font-semibold text-white">About Us</h6>
+            <p className="text-[#FFFFFF99]">
               We are a passionate team <br /> dedicated to providing the best{" "}
               <br /> services to our customers.
             </p>
           </nav>
-          <nav className="text-white">
-            <h6 className="footer-title">Quick Links</h6>
+          <nav className="text-[#FFFFFF99]">
+            <h6 className="text-white text-xl font-semibold">Quick Links</h6>
             <ul className="list-disc space-y-2">
               <a href="">
                 <li className="mt-2">Home</li>
@@ -33,14 +33,14 @@ export default function Footer() {
             </ul>
           </nav>
           <form className="text-white">
-            <h6 className="footer-title">Subscribe</h6>
+            <h6 className="text-white text-xl font-semibold">Subscribe</h6>
             <fieldset className="form-control w-80">
               <label className="label">
-                <span className="label-text text-white">
+                <span className="label-text text-[#FFFFFF99]">
                   Subscribe to our newsletter for the <br /> latest updates.
                 </span>
               </label>
-              <div className="join">
+              <div className="join mt-2">
                 <input
                   type="text"
                   placeholder="Enter Your Email"
@@ -53,7 +53,14 @@ export default function Footer() {
             </fieldset>
           </form>
         </footer>
-        <p className="text-white text-center py-8">
+        <hr
+          style={{
+            backgroundColor: "gray",
+            height: "1px",
+            border: "none",
+          }}
+        />
+        <p className="text-[#FFFFFF99] text-center py-8">
           @2024 Your Company All Rights Reserved.
         </p>
       </div>

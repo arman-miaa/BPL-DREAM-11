@@ -32,7 +32,7 @@ setActiveButton(status);
   // coin function
   const handleCoin = () => { 
     setCoin(coin + 500000);
-    toast.success('You Added $ 500000');
+    toast.success('You Added $ 5000000');
     
   }
 
@@ -45,19 +45,19 @@ setActiveButton(status);
 
    if (selectPlayer.biddingPrice > coin) {
      toast.error(
-       `Not enough coins to select ${selectPlayer.name}. You need $${selectPlayer.biddingPrice}.`
+       `Not enough Money `
      );
-     return coin - selectPlayer.biddingPrice; // Exit the function early if not enough coins
+     return coin - selectPlayer.biddingPrice; 
    }
     if (!isExist) {
       if (choosePlayer.length < 6) {
         setCoin((prevCoin) => prevCoin - selectPlayer.biddingPrice);
         setChoosePlayer([...choosePlayer, selectPlayer]);
         toast.success(
-          `You Addad ${selectPlayer.name} and his Price ${selectPlayer.biddingPrice}.`
+          `You Addad ${selectPlayer.name} and his Price $${selectPlayer.biddingPrice}.`
         );
       } else {
-        toast.warning("You can only select up to 6 players.");
+        toast.warning("You can only select 6 players.");
       }
     } else {
       toast.warn(`${selectPlayer.name} is already in the list.`);
@@ -66,10 +66,10 @@ setActiveButton(status);
 
   // delete selected player function
   const handleDeletePlayer = (deletePlayer) => {
-    console.log('delete clicked');
     const newChoosePlayer = choosePlayer.filter(
       (player) => player.playerId !== deletePlayer.playerId
     );
+    toast.success(`${deletePlayer.name} is remove successfully`)
     setChoosePlayer(newChoosePlayer);
    }
 
