@@ -38,7 +38,7 @@ export default function AvailableCard({ playerr, handleSelectPlayer }) {
             <h3 className="font-bold">Price: $ {biddingPrice}</h3>
             <button
               onClick={() => handleSelectPlayer(playerr)}
-              className="border-2 py-2 px-[12px] rounded-xl"
+              className="border-2 py-2 px-[12px] rounded-xl hover:bg-[#E7FE29]"
             >
               Choose Player
             </button>

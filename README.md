@@ -24,5 +24,8 @@ BPL-DREAM 11 is a React app for creating and managing a cricket team by selectin
 
 Netlify Live Link : 👉
 []()
- https://ph-a7-bpl-dream-11.netlify.app/
+ https://ph-a7-bpl-dream-11.netlify.app/  
+Vercel Live Link : 👉
+[]()
+ https://bpl-dream-11-gh6u56bni-arman-mias-projects.vercel.app/
   

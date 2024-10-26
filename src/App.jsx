@@ -10,6 +10,7 @@ import Footer from "./components/Footer/Footer";
  import "react-toastify/dist/ReactToastify.css";
 
 function App() {
+  
   // coin option
   const [coin, setCoin] = useState(0);
 
@@ -31,8 +32,8 @@ setActiveButton(status);
 
   // coin function
   const handleCoin = () => { 
-    setCoin(coin + 500000);
-    toast.success('You Added $ 5000000');
+    setCoin(coin + 6000000);
+    toast.success('Credit Added to your Account');
     
   }
 
@@ -45,7 +46,7 @@ setActiveButton(status);
 
    if (selectPlayer.biddingPrice > coin) {
      toast.error(
-       `Not enough Money `
+       `Not enough Money to buy ${selectPlayer.name}. Claim some Credit`
      );
      return coin - selectPlayer.biddingPrice; 
    }
@@ -54,13 +55,13 @@ setActiveButton(status);
         setCoin((prevCoin) => prevCoin - selectPlayer.biddingPrice);
         setChoosePlayer([...choosePlayer, selectPlayer]);
         toast.success(
-          `You Addad ${selectPlayer.name} and his Price $${selectPlayer.biddingPrice}.`
+          `Congrates! ${selectPlayer.name} is now in your squad.`
         );
       } else {
         toast.warning("You can only select 6 players.");
       }
     } else {
-      toast.warn(`${selectPlayer.name} is already in the list.`);
+      toast.error(`${selectPlayer.name} is already selected.`);
     }
   };
 
@@ -69,7 +70,7 @@ setActiveButton(status);
     const newChoosePlayer = choosePlayer.filter(
       (player) => player.playerId !== deletePlayer.playerId
     );
-    toast.success(`${deletePlayer.name} is remove successfully`)
+    toast.warn(`${deletePlayer.name} is removed`)
     setChoosePlayer(newChoosePlayer);
    }
 
@@ -77,7 +78,8 @@ setActiveButton(status);
   useEffect(() => {
     fetch('players.json')
       .then(response => response.json())
-    .then(data => setPlayer(data.players))
+      .then(data => setPlayer(data.players))
+    
   },[])
 
 

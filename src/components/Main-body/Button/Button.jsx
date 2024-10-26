@@ -23,7 +23,7 @@ export default function Button({
               backgroundColor:
                 activeButton === "available" ? "#E7FE29" : "transparent",
             }}
-            className="btn font-bold border-none"
+            className="btn font-bold border-none text-xl"
           >
             Available
           </div>
@@ -33,7 +33,7 @@ export default function Button({
               backgroundColor:
                 activeButton === "selected" ? "#E7FE29" : "transparent",
             }}
-            className="btn font-medium border-none"
+            className="btn font-medium border-none text-xl"
           >
             Selected ({choosePlayer.length})
           </div>
